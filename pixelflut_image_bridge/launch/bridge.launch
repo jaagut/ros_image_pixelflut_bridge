@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<launch>
+    <!-- Get launch params-->
+    <arg name="sim" default="false" description="true: activates simulation time, switches to simulation color settings and deactivates launching of an image provider" />
+
+    <!-- Start the pixelflut_image_bridge node -->
+    <node pkg="pixelflut_image_bridge" exec="bridge" output="screen"></node>
+</launch>

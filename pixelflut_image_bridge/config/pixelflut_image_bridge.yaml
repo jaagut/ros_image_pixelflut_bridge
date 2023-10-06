@@ -1,0 +1,20 @@
+pixelflut_image_bridge:
+  image_topic: {
+    type: string,
+    default_value: "/camera/image_to_record",
+    description: "Topic for Image messages",
+    read_only: true,
+  }
+  host: {
+    type: string,
+    default_value: "ftsell.de",
+    description: "Hostname of the pixelflut server"
+  }
+  port: {
+    type: int,
+    default_value: 9876,
+    description: "Port of the pixelflut server",
+    validation: {
+      bounds<>: [0, 65535]
+    }
+  }
